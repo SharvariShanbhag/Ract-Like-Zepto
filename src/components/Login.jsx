@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Card, Alert } from 'react-bootstrap';
+import { Form, Button, Container, Card, Alert, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -10,14 +10,12 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simple validation
     if (!email || !password) {
       setError('Please fill in all fields');
       return;
     }
-    // Mock login - in a real app, you would call an API here
     setError('');
-    navigate('/profile');
+    navigate('/');
   };
 
   return (
@@ -54,8 +52,8 @@ const Login = () => {
                 </Button>
               </Form>
               <div className="text-center mt-3">
-                <p>Don't have an account? <a href="#">Sign up</a></p>
-                <p><a href="#">Forgot password?</a></p>
+                <p>Don't have an account? <a href="/">Sign up</a></p>
+                <p><a href="/">Forgot password?</a></p>
               </div>
             </Card.Body>
           </Card>

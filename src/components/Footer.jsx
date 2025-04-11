@@ -4,11 +4,11 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white py-5 mt-5">
+    <footer className="footer-zepto py-5">
       <Container>
         <Row>
-          <Col md={3}>
-            <h5>ZeptoNow</h5>
+          <Col md={3} className="mb-4">
+            <h5 className="text-white">Zepto</h5>
             <p className="text-muted">Groceries delivered in minutes.</p>
             <div className="d-flex">
               <a href="#" className="text-white me-3"><FaFacebook /></a>
@@ -17,38 +17,41 @@ const Footer = () => {
               <a href="#" className="text-white"><FaLinkedin /></a>
             </div>
           </Col>
-          <Col md={3}>
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li><a href="#" className="text-muted">Home</a></li>
-              <li><a href="#" className="text-muted">Categories</a></li>
-              <li><a href="#" className="text-muted">Offers</a></li>
-              <li><a href="#" className="text-muted">New Arrivals</a></li>
+          
+          <Col md={3} className="mb-4">
+            <h5 className="text-white">Quick Links</h5>
+            <ul className="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Offers</a></li>
+              <li><a href="#">New Arrivals</a></li>
             </ul>
           </Col>
-          <Col md={3}>
-            <h5>Customer Service</h5>
-            <ul className="list-unstyled">
-              <li><a href="#" className="text-muted">Contact Us</a></li>
-              <li><a href="#" className="text-muted">FAQs</a></li>
-              <li><a href="#" className="text-muted">Shipping Policy</a></li>
-              <li><a href="#" className="text-muted">Returns & Refunds</a></li>
+          
+          <Col md={3} className="mb-4">
+            <h5 className="text-white">Customer Service</h5>
+            <ul className="footer-links">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Returns & Refunds</a></li>
             </ul>
           </Col>
-          <Col md={3}>
-            <h5>Company</h5>
-            <ul className="list-unstyled">
-              <li><a href="#" className="text-muted">About Us</a></li>
-              <li><a href="#" className="text-muted">Careers</a></li>
-              <li><a href="#" className="text-muted">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted">Terms of Service</a></li>
+          
+          <Col md={3} className="mb-4">
+            <h5 className="text-white">Company</h5>
+            <ul className="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
             </ul>
           </Col>
         </Row>
-        <hr className="my-4" />
-        <Row>
+        
+        <Row className="footer-bottom">
           <Col className="text-center text-muted">
-            <p>© 2023 ZeptoNow. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Zepto. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

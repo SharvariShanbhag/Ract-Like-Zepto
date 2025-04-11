@@ -1,8 +1,8 @@
 import React from 'react';
 import HeroSection from './HeroSection';
-import CorouselCategory from './CorouselCategory';
-import HighlighetedCoffeeSection from './HighlighetedCoffeeSection';
-import ProductList from './ProductList';
+import CategoryCarousel from './CategoryCarousel';
+import CoffeeSection from './CoffeeSection';
+import ProductGrid from './ProductGrid';
 import { Container } from 'react-bootstrap';
 
 const Homepage = () => {
@@ -10,14 +10,13 @@ const Homepage = () => {
     <div>
       <HeroSection />
       <Container className="my-5">
-        <h2 className="mb-4">Shop by Category</h2>
-        <CorouselCategory />
+        <CategoryCarousel />
       </Container>
+      <CoffeeSection />
       <Container className="my-5">
-        <h2 className="mb-4">Popular Products</h2>
-        <ProductList />
+        <h2 className="section-title">Popular Products</h2>
+        <ProductGrid />
       </Container>
-      <HighlighetedCoffeeSection />
     </div>
   );
 };
